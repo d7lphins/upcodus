@@ -3,25 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Endereço Cadastrado</title>
+    <title>Desafio</title>
     <!-- Links para o Bootstrap CSS via CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Link para o seu arquivo de estilo customizado -->
-    <link href="caminho_para_arquivo_custom.css" rel="stylesheet">
     <!-- Font Awesome via CDN -->
     <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
-<style>
-    body {
-    background-color: black;
-    color: white;
-}
 
+<style>
+    body{
+        background-color:#000;
+    }
 </style>
 <body>
     <!-- Header -->
-      <!-- Header -->
-      <header class="bg-black text-white py-3">
+    <header class="bg-black text-white py-3">
         <!-- Código do header aqui -->
         <div class="container">
             <div class="row">
@@ -31,7 +27,7 @@
                 </div>
                 <div class="col-4 text-center">
                     <!-- Logo -->
-                    <img src="./img/tela1/editar.png" alt="Logo" class="">
+                    <img src="./img/tela1/desafio.png" alt="Logo" class="">
                 </div>
                 <div class="col-4 text-right">
                     <!-- Menu Hamburguer -->
@@ -56,34 +52,45 @@
     <!-- Conteúdo da página -->
     <div class="container">
         <div class="row mt-4">
-
-            <h1 class="text-center"  style="color: #FFC85C"> Atualizar endereço</h1>
-            <div class="col-md-12">
-                <!-- Input com borda circular e placeholder cinza -->
-                <input type="text" class="form-control mb-2" placeholder="Local" style="color: #A9A9A9;">
-                <!-- Span com cor #FFC85C e texto "Adicione o endereço da foto" -->
-                <span style="color: #FFC85C">Adicione o endereço que deseja atualizar </span>
-                <!-- Campo para submeter foto -->
-                <input type="file" class="form-control mb-3">
-
-                <!-- Span com cor #FFC85C e texto "Adicione a foto da rua" -->
-                <span style="color: #FFC85C">Adicione a foto da rua</span>
-                <!-- Campo para submeter foto -->
-                <!-- <input type="file" class="form-control mb-3"> -->
-
-                <!-- Textarea com span e texto -->
-                <textarea class="form-control mb-2" rows="4" placeholder="Adicione informação" style="color: #A9A9A9;"></textarea>
-                <span style="color: #FFC85C">Adicione informação</span>
-
-                <!-- Botão submit -->
-               
+            <div class="col-md-12 text-center">
+                <!-- H1 com cor #FFC85C e texto "Selecione o cadastro que quer alterar" -->
+                <h1 style="color: #FFC85C;">Olá Maria, temos um desafio, <br>selecione abaixo
+                    a que pretende atende <br>no momento</h1>
             </div>
-             <a href="pagina_desafio_concluido.html"> <button type="submit" class="btn btn-primary mt-3">Enviar</button>
-             </a>
+        </div>
+        <div class="row mt-3">
+            <div class="col-md-12 text-center">
+                <!-- Botão "Rua das Laranjeiras" que leva para cad-atualizar.html -->
+                <a href="cad-atualizar.html" class="btn btn-primary" style="color: #FFC85C; background-color: #0057BF;">Rua das Laranjeiras</a>
             </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-md-12 text-center">
+                <!-- Botão "Rua das Laranjeiras" que leva para cad-atualizar.html -->
+                <a href="cad-atualizar.html" class="btn btn-primary" style="color: #FFC85C; background-color: #0057BF;">Rua dos limoeiros</a>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-md-12 text-center">
+                <!-- Botão "Rua das Laranjeiras" que leva para cad-atualizar.html -->
+                <a href="cad-atualizar.html" class="btn btn-primary" style="color: #FFC85C; background-color: #0057BF;">Viela dos Abacaxis</a>
+            </div>
+        </div>
     </div>
 
     <!-- Importe o Bootstrap JS via CDN antes de fechar a tag </body> -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
+<script>
+    // Script para exibir/ocultar o menu hamburguer
+    document.getElementById("menuButton").addEventListener("click", function() {
+        var menuLinks = document.getElementById("menuLinks");
+        if (menuLinks.classList.contains("d-none")) {
+            menuLinks.classList.remove("d-none");
+        } else {
+            menuLinks.classList.add("d-none");
+        }
+    });
+</script>
