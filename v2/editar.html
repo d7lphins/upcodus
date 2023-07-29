@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecione o Cadastro</title>
+    <!-- Links para o Bootstrap CSS via CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Link para o seu arquivo de estilo customizado -->
+    <link href="caminho_para_arquivo_custom.css" rel="stylesheet">
+    <!-- Font Awesome via CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+<style>
+    body{
+        background-color:#000;
+    }
+</style>
+<body>
+    <!-- Header -->
+    <header class="bg-black text-white py-3">
+        <!-- Código do header aqui -->
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <!-- Imagem/avatar do usuário ou foto -->
+                    <img src="./img/tela1/avatar.png" alt="Avatar do usuário" class="img-fluid rounded-circle">
+                </div>
+                <div class="col-4 text-center">
+                    <!-- Logo -->
+                    <img src="./img/tela1/editar.png" alt="Logo" class="">
+                </div>
+                <div class="col-4 text-right">
+                    <!-- Menu Hamburguer -->
+                    <button class="btn btn-dark float-end" id="menuButton">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div id="menuLinks" class="d-none">
+                        <ul class="list-unstyled">
+                            <li><a href="#">Perfil</a></li>
+                            <li><a href="#">Adicionar Endereço</a></li>
+                            <li><a href="#">Atualizar Endereço</a></li>
+                            <li><a href="#">Locais Cadastrados</a></li>
+                            <li><a href="#">Desafios Correios</a></li>
+                            <li><a href="#">Deslogar</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdo da página -->
+    <div class="container">
+        <div class="row mt-4">
+            <div class="col-md-12 text-center">
+                <!-- H1 com cor #FFC85C e texto "Selecione o cadastro que quer alterar" -->
+                <h1 style="color: #FFC85C;">Selecione o cadastro que <br> quer alterar</h1>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-md-12 text-center">
+                <!-- Botão "Rua das Laranjeiras" que leva para cad-atualizar.html -->
+                <a href="cad-atualizar.html" class="btn btn-primary" style="color: #FFC85C; background-color: #0057BF;">Rua das Laranjeiras</a>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-md-12 text-center">
+                <!-- Botão "Rua das Laranjeiras" que leva para cad-atualizar.html -->
+                <a href="cad-atualizar.html" class="btn btn-primary" style="color: #FFC85C; background-color: #0057BF;">Rua dos limoeiros</a>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-md-12 text-center">
+                <!-- Botão "Rua das Laranjeiras" que leva para cad-atualizar.html -->
+                <a href="cad-atualizar.html" class="btn btn-primary" style="color: #FFC85C; background-color: #0057BF;">Viela dos Abacaxis</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Importe o Bootstrap JS via CDN antes de fechar a tag </body> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+<script>
+    // Script para exibir/ocultar o menu hamburguer
+    document.getElementById("menuButton").addEventListener("click", function() {
+        var menuLinks = document.getElementById("menuLinks");
+        if (menuLinks.classList.contains("d-none")) {
+            menuLinks.classList.remove("d-none");
+        } else {
+            menuLinks.classList.add("d-none");
+        }
+    });
+</script>
