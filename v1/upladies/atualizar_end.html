@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Endereço Cadastrado</title>
+    <!-- Links para o Bootstrap CSS via CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Link para o seu arquivo de estilo customizado -->
+    <link href="caminho_para_arquivo_custom.css" rel="stylesheet">
+    <!-- Font Awesome via CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="bg-dark text-white py-3">
+        <!-- Código do header aqui -->
+    </header>
+
+    <!-- Conteúdo da página -->
+    <div class="container">
+        <div class="row mt-4">
+            <div class="col-md-12">
+                <!-- Input com borda circular e placeholder -->
+                <input type="text" class="form-control  mb-2" placeholder="Local">
+                <!-- Span com cor #FFC85C e texto "Adicione o endereço da foto" -->
+                <span style="color: #FFC85C">Adicione o endereço da foto</span>
+                <!-- Campo para submeter foto -->
+                <input type="file" class="form-control mb-3">
+
+                <!-- Span com cor #FFC85C e texto "Adicione a foto da rua" -->
+                <span style="color: #FFC85C">Adicione a foto da rua</span>
+                <!-- Campo para submeter foto -->
+                <input type="file" class="form-control mb-3">
+
+                <!-- Textarea com span e texto -->
+                <textarea class="form-control mb-2" rows="4"></textarea>
+                <span style="color: #FFC85C">Adicione informação</span>
+
+               
+            </div>
+             <!-- Botão submit -->
+             <button type="submit" class="btn btn-primary">Enviar</button>
+        </div>
+    </div>
+
+    <!-- Importe o Bootstrap JS via CDN antes de fechar a tag </body> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

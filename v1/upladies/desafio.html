@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Desafio</title>
+    <!-- Links para o Bootstrap CSS via CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Link para o seu arquivo de estilo customizado -->
+    <link href="caminho_para_arquivo_custom.css" rel="stylesheet">
+</head>
+
+<style>
+    body {
+    background-color: black;
+    color: white;
+}
+p{
+    color: black;  
+}
+</style>
+<body>
+    <!-- Header -->
+    <header class="bg-dark text-white py-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <!-- Imagem/avatar do usuário ou foto -->
+                    <img src="caminho_para_avatar_ou_foto.jpg" alt="Avatar do usuário" class="img-fluid rounded-circle">
+                </div>
+                <div class="col-4 text-center">
+                    <!-- Logo -->
+                    <h3>Logo Aqui</h3>
+                </div>
+                <div class="col-4 text-right">
+                    <!-- Menu Hamburguer -->
+                    <button class="btn btn-dark" id="menuButton">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div id="menuLinks" class="d-none">
+                        <ul class="list-unstyled">
+                            <li><a href="#">Perfil</a></li>
+                            <li><a href="#">Adicionar Endereço</a></li>
+                            <li><a href="#">Atualizar Endereço</a></li>
+                            <li><a href="#">Locais Cadastrados</a></li>
+                            <li><a href="#">Desafios Correios</a></li>
+                            <li><a href="#">Deslogar</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+        <!-- header -->
+    
+
+    <!-- Main -->
+    <main class="pt-4">
+        <div class="container">
+            <!-- Texto com fundo rosa claro -->
+            <div class="row">
+                <div class="col-md-12 text-center" style="background-color: #ffe4e1; padding: 10px;">
+                    <p>Olá Maria, Temos um novo desafio de lugares.<br> Escolha qual deseja participar.</p>
+                </div>
+            </div>
+
+            <!-- Chackbox e botão submit -->
+            <div class="row mt-4 ">
+                <div class="col-md-12 ">
+                    <form action="#" method="post" id="challengeForm">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="challenge" id="chkJomar" value="jomar">
+                            <label class="form-check-label" for="chkJomar">Rua Jomar</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="challenge" id="chkLuiz" value="luiz">
+                            <label class="form-check-label" for="chkLuiz">Rua Luiz Gois</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="challenge" id="chkMaria" value="maria">
+                            <label class="form-check-label" for="chkMaria">Rua Maria Laet</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary mt-3">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Importe o Bootstrap JS via CDN antes de fechar a tag </body> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Script para redirecionar para a página do desafio selecionado -->
+    <script>
+        document.getElementById("challengeForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+            const form = event.target;
+            const selectedChallenge = form.querySelector("input[name='challenge']:checked");
+            if (selectedChallenge) {
+                const challengeValue = selectedChallenge.value;
+                if (challengeValue === "jomar") {
+                    window.location.href = "jomar.html";
+                } else if (challengeValue === "luiz") {
+                    window.location.href = "luiz.html";
+                } else if (challengeValue === "maria") {
+                    window.location.href = "maria.html";
+                }
+            } else {
+                alert("Selecione uma opção de desafio antes de enviar.");
+            }
+        });
+    </script>
+</body>
+</html>
